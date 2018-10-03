@@ -1,10 +1,12 @@
 # react-native-douban
 
 
+初学React-Native
 
-### 版本:
-react:16.5.0
-react-native:0.57.1
+
+### 版本:    
+- react:16.5.0       
+- react-native:0.57.1    
 
 
 ### 第三方框架  
