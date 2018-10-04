@@ -30,7 +30,7 @@ export default class App extends Component<Props> {
                 style={styles.tab}>
                 <TabNavigator.Item
                     selected={this.state.tab === 'book'}
-                    title="book"
+                    title="图书"
                     renderIcon={() => <Image
                         style={styles.image}
                         source={require('./src/img/icon_book_normal.png')}/>}
@@ -43,7 +43,7 @@ export default class App extends Component<Props> {
                 </TabNavigator.Item>
                 <TabNavigator.Item
                     selected={this.state.tab === 'movie'}
-                    title="movie"
+                    title="电影"
                     renderIcon={() => <Image
                         style={styles.image}
                         source={require('./src/img/icon_me_normal.png')}/>}
