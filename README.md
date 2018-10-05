@@ -45,7 +45,8 @@
 ### 二、API
 #### 2.1搜索图书
 **请求URL：** 
--  `https://api.douban.com/v2/book/search`
+-  `https://api.douban.com/v2/book/search`  
+-  `https://api.douban.com/v2/book/search?q=java&count=1`
 
 **请求方式：**
 - GET
@@ -144,7 +145,7 @@
 #### 2.3搜索电影
 **请求URL：** 
 -  `https://api.douban.com/v2/movie/search`
--  `https://api.douban.com/v2/movie/search?q=%E4%BB%8E%E4%BD%A0%E7%9A%84%E5%85%A8%E4%B8%96%E7%95%8C%E8%B7%AF%E8%BF%87&&count=1`
+-  `https://api.douban.com/v2/movie/search?q=从你的全世界路过&&count=1`
 
 **请求方式：**
 - GET
