@@ -8,14 +8,14 @@ import Icon from "./left_icon";
  * @param navigator 点击返回上一层的pop()
  * */
 export default class Header extends Component {
-    render(pop1 = pop) {
+    render() {
 
         //获取obj对象，包括按钮名称和title
         var headerContent = this.props.initObj;
 
         return (
             <View style={styles.header}>
-                <TouchableOpacity style={styles.left_btn}>
+                <TouchableOpacity style={styles.left_btn} onPress={this._pop.bind(this)}>
                     <Icon/>
                     <Text style={styles.btn_text}>{headerContent.backName}</Text>
                 </TouchableOpacity>
@@ -44,8 +44,8 @@ var styles = StyleSheet.create({
         transform: [{rotate: "45deg"}]
     },
     header: {
-        height: 44,
-        backgroundColor: "#3457ff",
+        height: 54,
+        backgroundColor: "#1296db",
         flexDirection: "row",
         justifyContent: "center",
         alignItems: "center"
@@ -62,14 +62,13 @@ var styles = StyleSheet.create({
     },
     title_container: {
         flex: 1,
-        justifyContent: "cneter",
+        justifyContent: "center",
         alignItems: "center"
     },
     title: {
         color: "#fff",
         fontSize: 18,
         fontWeight: "bold",
-        marginTop: 5,
         marginLeft: -50,
         textAlign: "center"
     }

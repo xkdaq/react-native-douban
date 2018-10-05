@@ -2,13 +2,14 @@
  * 书列表页
  * */
 import React, {Component} from 'react';
-import {ListView, ScrollView, StyleSheet, View} from 'react-native';
+import {ListView, ScrollView, View} from 'react-native';
 
 
 import Util from './../common/util';
 import SearchBar from './../common/searchbar';
 import ServiceURL from './../common/service';
 import BookItem from './book_item';
+import BookDetail from './book_detail';
 
 export default class bookList extends Component {
     constructor(props) {
@@ -18,7 +19,7 @@ export default class bookList extends Component {
             rowHasChanged: (oldRow, newRow) => oldRow !== newRow
         });
 
-        this._changeText=this._changeText.bind(this);
+        this._changeText = this._changeText.bind(this);
         this._renderRow = this._renderRow.bind(this);
 
         this.state = {
@@ -100,7 +101,7 @@ export default class bookList extends Component {
      * 渲染item
      * */
     _renderRow(book) {
-        return <BookItem book={book}/>
+        return <BookItem book={book} onPress={this._showDetail.bind(this, book.id)}/>
     }
 
     /**
@@ -128,6 +129,19 @@ export default class bookList extends Component {
      * */
     _searchPress() {
         this.getData();
+    }
+
+    /**
+     * 进入详情
+     * */
+    _showDetail(bookID) {
+        var detailRoute = {
+            component: BookDetail,
+            passProps: {
+                bookID: bookID
+            }
+        }
+        this.props.navigator.push(detailRoute)
     }
 
 }

@@ -31,6 +31,8 @@ export default class App extends Component<Props> {
                 <TabNavigator.Item
                     selected={this.state.tab === 'book'}
                     title="图书"
+                    titleStyle={{color: "#8a8a8a"}}
+                    selectedTitleStyle={{color: "#1296db"}}
                     renderIcon={() => <Image
                         style={styles.image}
                         source={require('./src/img/icon_book_normal.png')}/>}
@@ -44,6 +46,8 @@ export default class App extends Component<Props> {
                 <TabNavigator.Item
                     selected={this.state.tab === 'movie'}
                     title="电影"
+                    titleStyle={{color: "#8a8a8a"}}
+                    selectedTitleStyle={{color: "#1296db"}}
                     renderIcon={() => <Image
                         style={styles.image}
                         source={require('./src/img/icon_me_normal.png')}/>}
