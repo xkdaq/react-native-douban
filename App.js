@@ -69,6 +69,9 @@ const styles = StyleSheet.create({
     image: {
         width: 26,
         height: 26
+    },
+    title: {
+        color: "#1296db"
     }
 
 });

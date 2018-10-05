@@ -2,7 +2,11 @@ import React, {Component} from 'react';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import Icon from "./left_icon";
 
-
+/**
+ * 外部传入:
+ * @param initObj(backName,barTitle)
+ * @param navigator 点击返回上一层的pop()
+ * */
 export default class Header extends Component {
     render(pop1 = pop) {
 
@@ -16,14 +20,14 @@ export default class Header extends Component {
                     <Text style={styles.btn_text}>{headerContent.backName}</Text>
                 </TouchableOpacity>
                 <View style={styles.title_container}>
-                    <Text style={styles.title}>{headerContent.backTitle}</Text>
+                    <Text style={styles.title}>{headerContent.barTitle}</Text>
                 </View>
 
             </View>
         );
     }
 
-    _pop(){
+    _pop() {
         this.props.navigator.pop();
     }
 

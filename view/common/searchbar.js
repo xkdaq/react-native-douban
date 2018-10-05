@@ -2,7 +2,7 @@
  * 组件!!!
  * */
 
-import React from 'react';
+import React, {Component} from 'react';
 import {StyleSheet, Text, TextInput, TouchableOpacity, View} from "react-native";
 
 

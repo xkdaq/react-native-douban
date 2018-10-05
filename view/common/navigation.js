@@ -18,7 +18,7 @@ export default class Navigation extends Component {
             <Navigator
                 initialRoute={rootRoute}
                 configureScene={() => {
-                    return Navigator.SceneConfigs.HorizontalSwipeJump;
+                    return Navigator.SceneConfigs.PushFromRight;  //HorizontalSwipeJump
                 }}
                 renderScene={(route, navigator) => {
                     var Component = route.component;
