@@ -24,7 +24,7 @@ export default class bookDetail extends Component {
                 this.state.bookData ?
                     <View>
                         <Header
-                            initObj={{backName: "book", barTitle: bookData.title}}
+                            initObj={{backName: "图书", barTitle: bookData.title}}
                             navigator={this.props.navigator}/>
 
                         <ScrollView>
