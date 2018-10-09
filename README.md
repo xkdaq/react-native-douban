@@ -8,10 +8,10 @@
 - react-native:0.57.1    
 
 ### 截图
-<center class="half">
+<figure class="half">
     <img src="https://raw.githubusercontent.com/xkdaq/react-native-douban/master/src/screenshot/screenshot_01.jpg" width="243" height="432" /> 
     <img src="https://raw.githubusercontent.com/xkdaq/react-native-douban/master/src/screenshot/screenshot_02.jpg" width="243" height="432" />
-</center>
+</figure>
 
 
 ### 一、项目模块划分
