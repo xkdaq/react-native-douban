@@ -11,7 +11,6 @@
 
 <figure class="half">
     <img src="https://raw.githubusercontent.com/xkdaq/react-native-douban/master/src/screenshot/screenshot_01.jpg" width="243" height="432" /> 
-    <img src="https://raw.githubusercontent.com/xkdaq/react-native-douban/master/src/screenshot/screenshot_02.jpg" width="243" height="432" />
 </figure>
 
 
