@@ -19,7 +19,7 @@ var styles = StyleSheet.create({
         height: 15,
         borderLeftWidth: 2,
         borderBottomWidth: 2,
-        borderColor: "#fff",
+        borderColor: "#ffffff",
         marginLeft: 10,
         transform: [{rotate: "45deg"}]  //将一个矩形框旋转45度
     }
