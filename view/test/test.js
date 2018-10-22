@@ -40,7 +40,7 @@ export default class Test extends Component<Props> {
                             marginTop: 10,
                             fontSize: 14,
                             color: 'white'
-                        }}>会唱情歌的小猴子</Text>
+                        }}>许可</Text>
                     </View>
                 </View>
 
@@ -62,7 +62,9 @@ export default class Test extends Component<Props> {
     renderItem(img, title) {
         return (
             <TouchableOpacity
-                style={styles.item}>
+                onPress={() => this.props.navigation.navigate(title)}
+                style={styles.item}
+            >
                 <View style={styles.item_left}>
                     <Image source={img}/>
                     <Text style={styles.item_left_text}>{title}</Text>
