@@ -36,11 +36,11 @@ export default class Test extends Component<Props> {
                         alignItems: 'center'
                     }}>
                         <Image source={require('./../../src/img/img_default_photo.png')}/>
-                        <Text style={{
-                            marginTop: 10,
-                            fontSize: 14,
-                            color: 'white'
-                        }}>许可</Text>
+                        <Text style={{color: 'white', marginTop: 2}}>Login to make great remarks</Text>
+                        <TouchableOpacity style={styles.loginBtn}>
+                            <Text style={{color: 'white', fontSize: 10}}>login</Text>
+                        </TouchableOpacity>
+
                     </View>
                 </View>
 
@@ -77,6 +77,19 @@ export default class Test extends Component<Props> {
 
 
 const styles = StyleSheet.create({
+
+
+    loginBtn: {
+        borderRadius: 5,
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginTop: 10,
+        paddingHorizontal: 16,
+        paddingVertical: 3,
+        borderWidth: 1,
+        borderColor: 'white'
+    },
+
 
     item: {
         height: 54,

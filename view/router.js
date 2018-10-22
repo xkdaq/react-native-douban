@@ -5,10 +5,19 @@ import News from "./test/news";
 import Market from "./test/market";
 import Setting from "./test/setting";
 import About from "./test/about";
+import APP from "./../App";
 
 
 const RootStack = StackNavigator(
     {
+        APP: {
+            screen: APP,
+            navigationOptions: ({navigation}) => ({
+                header: null
+            })
+
+        },
+        //测试页面
         Test: {
             screen: Test,
             navigationOptions: ({navigation}) => ({
@@ -16,35 +25,34 @@ const RootStack = StackNavigator(
             })
 
         },
-
+        //测试页面:News
         News: {
             screen: News,
             navigationOptions: {
                 title: 'News'
             }
         },
-
+        //测试页面:Market
         Market: {
             screen: Market,
             navigationOptions: {
                 title: 'Market'
             }
         },
-
+        //测试页面:Setting
         Setting: {
             screen: Setting,
             navigationOptions: {
                 title: 'Setting'
             }
         },
-
+        //测试页面:About
         About: {
             screen: About,
             navigationOptions: ({navigation}) => ({
                 header: null
             })
         },
-
         //..
     },
     {
