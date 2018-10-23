@@ -7,6 +7,10 @@ import Setting from "./test/setting";
 import About from "./test/about";
 import APP from "./../App";
 
+import bookList from "./book/book_list";
+import movieList from "./movie/movie_list";
+import Mine from "./me/me";
+
 
 const RootStack = StackNavigator(
     {
@@ -54,6 +58,9 @@ const RootStack = StackNavigator(
             })
         },
         //..
+        bookList: {screen: bookList},
+        movieList: {screen: movieList},
+        Mine: {screen: Mine},
     },
     {
         navigationOptions: {
