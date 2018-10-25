@@ -18,7 +18,8 @@ let APIS = {
 
     //自己造的数据
     getTestBanner: TestURL + "getBanner",
-    getTestArticleType: TestURL + "getArticleType"
+    getTestArticleType: TestURL + "getArticleType",
+    getNewsList: TestURL,
 
 };
 

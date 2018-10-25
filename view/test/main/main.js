@@ -7,14 +7,14 @@
  */
 
 import React, {Component} from 'react';
-import {Dimensions, Image, ListView, ScrollView, StyleSheet, Text, View} from 'react-native';
+import {Dimensions, Image, StyleSheet, Text, View} from 'react-native';
 import ScrollableTabView, {ScrollableTabBar} from 'react-native-scrollable-tab-view'
 import RequestUtil from './../util/RequestUtil'
 import APIs from "../util/service";
 import Swiper from "react-native-swiper";
 import NewsList from "./newslist";
 
-const {height, width} = Dimensions.get('window');
+const {width} = Dimensions.get('window');
 
 export default class Main extends Component<Props> {
 
@@ -23,22 +23,19 @@ export default class Main extends Component<Props> {
         this.state = {
             bannerArr: "",
             tabName: "",
-            dataSource: new ListView.DataSource({
-                rowHasChanged: (row1, row2) => row1 !== row2
-            }),
         };
     }
 
     render() {
         return (
-            <ScrollView style={{flex: 1, flexDirection: 'column'}}>
+            <View style={{flex: 1, flexDirection: 'column'}}>
                 <View style={styles.wrapper}>
                     {this.renderBanner()}
                 </View>
                 <View style={{flex: 1}}>
                     {this.renderTabView()}
                 </View>
-            </ScrollView>
+            </View>
         );
     }
 
@@ -52,6 +49,7 @@ export default class Main extends Component<Props> {
                 let url = this.state.bannerArr.data[i].img;
                 arr.push(
                     <Image
+                        key={i}
                         resizeMode="cover"
                         style={styles.bannerImage}
                         source={{uri: url.indexOf('http') === 0 ? `${url}` : `http://${url}`}}
@@ -89,9 +87,9 @@ export default class Main extends Component<Props> {
         if (this.state.tabName.code === 1) {
             var data = this.state.tabName.data;
             tabNameList.push(
-                data.map((name, index) => {
-                    return (<View tabLabel={name.title} key={index}>
-                        <NewsList key={index} dic={name}/>
+                data.map((news, i) => {
+                    return (<View key={i} tabLabel={news.title}>
+                        <NewsList key={i} news={news}/>
                     </View>)
                 })
             );
@@ -196,7 +194,9 @@ export default class Main extends Component<Props> {
         //         alert(error)
         //     });
 
-
+        /**
+         * 获取文章类别(测试)
+         * */
         RequestUtil.getRequest(APIs.getTestArticleType,
             function (data) {
                 //成功回调
@@ -213,7 +213,6 @@ export default class Main extends Component<Props> {
 
 
 const styles = StyleSheet.create({
-
 
     //首页轮播图
     wrapper: {
@@ -242,13 +241,15 @@ const styles = StyleSheet.create({
         width: width,
     },
 
-
+    //tab
     tab: {
         paddingBottom: 0
     },
+    //tab的文字
     tabText: {
         fontSize: 16
     },
+    //tab的下划线
     tabBarUnderline: {
         backgroundColor: '#3e9ce9',
         height: 2
