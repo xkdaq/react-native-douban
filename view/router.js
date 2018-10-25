@@ -5,22 +5,25 @@ import News from "./test/news";
 import Market from "./test/market";
 import Setting from "./test/setting";
 import About from "./test/about";
-import APP from "./../App";
-
-import bookList from "./book/book_list";
-import movieList from "./movie/movie_list";
-import Mine from "./me/me";
+import Main from "./test/main/main";
 
 
 const RootStack = StackNavigator(
     {
-        APP: {
-            screen: APP,
+        // APP: {
+        //     screen: APP,
+        //     navigationOptions: ({navigation}) => ({
+        //         header: null
+        //     })
+        //
+        // },
+        Main: {
+            screen: Main,
             navigationOptions: ({navigation}) => ({
                 header: null
             })
-
         },
+
         //测试页面
         Test: {
             screen: Test,
@@ -58,9 +61,6 @@ const RootStack = StackNavigator(
             })
         },
         //..
-        bookList: {screen: bookList},
-        movieList: {screen: movieList},
-        Mine: {screen: Mine},
     },
     {
         navigationOptions: {
