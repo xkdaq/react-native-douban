@@ -16,12 +16,10 @@ export default class newsitem extends Component {
                     <View>
                         <Text style={{color: '#4A4A4A'}} numberOfLines={3}>{news.title}</Text>
                     </View>
-
                     <View>
                         <Text style={{color: '#4A4A4A', fontSize: 10}} numberOfLines={1}>{news.type}</Text>
                         <Text style={{color: '#4A4A4A', fontSize: 10}} numberOfLines={1}>{news.time}</Text>
                     </View>
-
                 </View>
 
                 <View style={styles.imageContainer}>

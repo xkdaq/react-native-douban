@@ -91,7 +91,7 @@ export default class Main extends Component<Props> {
             tabNameList.push(
                 data.map((news, i) => {
                     return (<View key={i} tabLabel={news.title}>
-                        <NewsList key={i} news={news}/>
+                        <NewsList key={i} news={news} navigation={this.props.navigation}/>
                     </View>)
                 })
             );

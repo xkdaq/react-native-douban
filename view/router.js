@@ -6,23 +6,24 @@ import Market from "./test/market";
 import Setting from "./test/setting";
 import About from "./test/about";
 import Main from "./test/main/main";
+import NewsDetail from "./test/main/newsdetail";
 
 
 const RootStack = StackNavigator(
     {
-        // APP: {
-        //     screen: APP,
-        //     navigationOptions: ({navigation}) => ({
-        //         header: null
-        //     })
-        //
-        // },
+
         Main: {
             screen: Main,
             navigationOptions: ({navigation}) => ({
                 header: null
             })
         },
+
+        NewsDetail: {
+            screen: NewsDetail,
+            navigationOptions: {title: "KoinRocket News"}
+        },
+
 
         //测试页面
         Test: {

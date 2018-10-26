@@ -1,11 +1,11 @@
 import React from 'react'
-import {Dimensions, ListView, StyleSheet, View} from 'react-native'
+import {ListView, StyleSheet, View} from 'react-native'
 import RequestUtil from "../util/RequestUtil";
 import APIs from "../util/service";
 import Util from "../../common/util";
 import NewsItem from './newsitem';
 
-const {width, height} = Dimensions.get('window');
+
 export default class NewsList extends React.Component {
 
     constructor(props) {
@@ -46,7 +46,7 @@ export default class NewsList extends React.Component {
      * 渲染item
      * */
     _renderRow(news) {
-        return <NewsItem news={news}/>
+        return <NewsItem news={news} onPress={() => this.props.navigation.navigate('NewsDetail', {newid: 'detail'})}/>
     }
 
     /**
