@@ -21,7 +21,7 @@ const RootStack = StackNavigator(
 
         NewsDetail: {
             screen: NewsDetail,
-            navigationOptions: {title: "KoinRocket News"}
+            navigationOptions: {title: "News"}
         },
 
 
