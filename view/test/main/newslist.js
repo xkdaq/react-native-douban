@@ -54,8 +54,8 @@ export default class NewsList extends React.Component {
      * */
     _renderSeparator(sectionID, rowID) {
         var style = {
-            height: 1,
-            backgroundColor: "#ccc"
+            height: 5,
+            backgroundColor: "#F5F5F5"
         }
         return (
             <View style={style} key={sectionID + rowID}/>

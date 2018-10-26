@@ -11,13 +11,21 @@ export default class newsitem extends Component {
         var news = this.props.news;
         return (
             <TouchableOpacity style={styles.item} {...this.props}>
-                {/*图书图像*/}
-                <View>
-                    <Image style={styles.image} source={{uri: news.img}}/>
-                </View>
-                {/*图书信息*/}
+
                 <View style={styles.contentContainer}>
-                    <Text>{news.content}</Text>
+                    <View>
+                        <Text style={{color: '#4A4A4A'}} numberOfLines={3}>{news.title}</Text>
+                    </View>
+
+                    <View>
+                        <Text style={{color: '#4A4A4A', fontSize: 10}} numberOfLines={1}>{news.type}</Text>
+                        <Text style={{color: '#4A4A4A', fontSize: 10}} numberOfLines={1}>{news.time}</Text>
+                    </View>
+
+                </View>
+
+                <View style={styles.imageContainer}>
+                    <Image style={styles.image} source={{uri: news.img}}/>
                 </View>
             </TouchableOpacity>
         );
@@ -27,36 +35,25 @@ export default class newsitem extends Component {
 
 var styles = StyleSheet.create({
     item: {
+        backgroundColor: 'white',
         flexDirection: "row",
-        height: 120,
+        height: 110,
         padding: 10
+    },
+    contentContainer: {
+        flex: 1,
+        marginLeft: 8,
+        flexDirection: 'column',
+        justifyContent: 'space-between',
     },
     imageContainer: {
         justifyContent: "center",
         alignItems: "center"
     },
     image: {
-        width: 80,
-        height: 100
+        width: 120,
+        height: 90,
+        borderRadius: 4
     },
-    contentContainer: {
-        flex: 1,
-        marginLeft: 15
-    },
-    textContainer: {
-        flex: 1,
-        justifyContent: "center"
-    },
-    publisher_author: {
-        color: "#a3a3a3",
-        fontSize: 13
-    },
-    price: {
-        color: "#2bb2a3",
-        fontSize: 16
-    },
-    pages: {
-        marginLeft: 10,
-        color: "#a7a0a0"
-    }
-})
+
+});

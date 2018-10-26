@@ -7,12 +7,13 @@
  */
 
 import React, {Component} from 'react';
-import {Dimensions, Image, StyleSheet, Text, View} from 'react-native';
+import {Dimensions, Image, ScrollView, StyleSheet, Text, View} from 'react-native';
 import ScrollableTabView, {ScrollableTabBar} from 'react-native-scrollable-tab-view'
 import RequestUtil from './../util/RequestUtil'
 import APIs from "../util/service";
 import Swiper from "react-native-swiper";
 import NewsList from "./newslist";
+import Util from "../../common/util";
 
 const {width} = Dimensions.get('window');
 
@@ -28,14 +29,17 @@ export default class Main extends Component<Props> {
 
     render() {
         return (
-            <View style={{flex: 1, flexDirection: 'column'}}>
-                <View style={styles.wrapper}>
-                    {this.renderBanner()}
+
+                <View style={{flex: 1, flexDirection: 'column'}}>
+                    <View style={styles.wrapper}>
+                        {this.renderBanner()}
+                    </View>
+                    <View style={{flex: 1}}>
+                        {this.renderTabView()}
+                    </View>
                 </View>
-                <View style={{flex: 1}}>
-                    {this.renderTabView()}
-                </View>
-            </View>
+
+
         );
     }
 
@@ -72,9 +76,7 @@ export default class Main extends Component<Props> {
             );
         } else {
             return (
-                <View>
-                    <Text>loading...</Text>
-                </View>
+                Util.loading
             );
         }
     }
@@ -106,9 +108,7 @@ export default class Main extends Component<Props> {
 
         } else {
             return (
-                <View>
-                    <Text>loading...</Text>
-                </View>
+                Util.loading
             );
         }
     }
