@@ -59,21 +59,21 @@ export default class App extends Component<Props> {
                     onPress={() => this.setState({tab: 'movie'})}>
                     <Navigation component={movieList}/>
                 </TabNavigator.Item>
-                <TabNavigator.Item
-                    selected={this.state.tab === 'me'}
-                    title="我的"
-                    titleStyle={{color: "#8a8a8a"}}
-                    selectedTitleStyle={{color: "#1296db"}}
-                    renderIcon={() => <Image
-                        style={styles.image}
-                        source={require('./src/img/icon_me_normale.png')}/>}
-                    renderSelectedIcon={() => <Image
-                        style={styles.image}
-                        source={require('./src/img/icon_me_selected.png')}
-                    />}
-                    onPress={() => this.setState({tab: 'me'})}>
-                    <Navigation component={Me}/>
-                </TabNavigator.Item>
+                {/*<TabNavigator.Item*/}
+                    {/*selected={this.state.tab === 'me'}*/}
+                    {/*title="我的"*/}
+                    {/*titleStyle={{color: "#8a8a8a"}}*/}
+                    {/*selectedTitleStyle={{color: "#1296db"}}*/}
+                    {/*renderIcon={() => <Image*/}
+                        {/*style={styles.image}*/}
+                        {/*source={require('./src/img/icon_me_normale.png')}/>}*/}
+                    {/*renderSelectedIcon={() => <Image*/}
+                        {/*style={styles.image}*/}
+                        {/*source={require('./src/img/icon_me_selected.png')}*/}
+                    {/*/>}*/}
+                    {/*onPress={() => this.setState({tab: 'me'})}>*/}
+                    {/*<Navigation component={Me}/>*/}
+                {/*</TabNavigator.Item>*/}
             </TabNavigator>
         );
     }
